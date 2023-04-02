@@ -11,13 +11,16 @@
     />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css"/>
+    <link rel="stylesheet" href="./css/tablet.css"/>
+    <link rel="stylesheet" href="./css/desktop.css"/>
   </head>
   <body>
     <header>
       <div class="container">
         <a href="./index.html" class="logo"> <span class="logo-left">Web</span>Studio </a>
         <nav class="heder-nav">
-          <ul class="nav-list">
+          <ul class="nav-list tab-nav-list">
             <li class="nav-item">
               <a href="./index.html" class="heder-nav-link current">Студия</a>
             </li>
@@ -30,7 +33,7 @@
           </ul>
         </nav>
 
-        <ul class="list-comun">
+        <ul class="list-comun tab-list-comun">
           <li class="list-comun-item">
             <a href="mailto:info@devstudio.com" class="heder-tel">
               <svg class="icon-mail" width="16" height="12">
@@ -47,7 +50,71 @@
             >
           </li>
         </ul>
+        <button type="button" class="mobile-menu-open" data-menu-open>
+          <svg class="mobile-close" width="40px" height="40px">
+            <use href="./images/icon.svg#icon-menu_24px"></use>
+          </svg>
+        </button>
       </div>
+
+      
+    <div class="mobile-menu" data-menu>
+      <button type="button"class="button-close-menu" data-menu-close>
+        <svg class="mobile-close" width="40px" height="40px">
+          <use href="./images/icon.svg#close-black"></use>
+        </svg>
+      </button>
+      <div class="container mobile-menu_contaner">
+        
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item"><a href="./index.html" class="mobile-nav-link current">Студия</a></li>
+          <li class="mobile-menu-item"><a href="./portfolio.html" class="mobile-nav-link">Портфолио</a></li>
+          <li class="mobile-menu-item"><a href="" class="mobile-nav-link">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="mobile-contact">
+        <ul class="mobile-comun">
+          <li class="list-mobile-item">
+            <a href="tel:+38096111111" class="mobile-heder-tel">
+              +38 096 111 11 11</a>
+          </li>
+          <li class="list-mobile-item">
+            <a href="mailto:info@devstudio.com" class="mobile-heder-email">
+              info@devstudio.com</a>
+          </li>
+                </ul>
+                <ul class="mobile-social-list">
+                  <li class="mobile-social-item">
+                    <a href="/" class="mobile-social-link-employee">
+                      <svg class="icon-social" width="20" height="20">
+                        <use href="./images/icon.svg#instagram-2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="mobile-social-item">
+                    <a href="/" class="mobile-social-link-employee">
+                      <svg class="icon-social" width="20" height="20">
+                        <use href="./images/icon.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="mobile-social-item">
+                    <a href="/" class="mobile-social-link-employee">
+                      <svg class="icon-social" width="20" height="20">
+                        <use href="./images/icon.svg#facebook-1"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="mobile-social-item">
+                    <a href="/" class="mobile-social-link-employee">
+                      <svg class="icon-social" width="20" height="20">
+                        <use href="./images/icon.svg#linkedin-1"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+      </div>
+    </div>
     </header>
     <main>
       <section class="business">
@@ -114,6 +181,7 @@
           <ul class="our-work-list">
             <li class="owl-item">
               <img
+              srcset="./images/box1.jpg 1x, ./images/box1@2x.jpg 2x"
                 src="./images/box1.jpg"
                 alt="производство программного обеспечения"
                 width="370"
@@ -121,11 +189,14 @@
               <div class="work-box">Деcктопные приложения</div>
             </li>
             <li class="owl-item">
-              <img src="./images/box2.jpg" alt="тестирование мобильных приложений" width="370" />
+              <img 
+              srcset="./images/box2.jpg 1x, ./images/box2@2x.jpg 2x"
+              src="./images/box2.jpg" alt="тестирование мобильных приложений" width="370" />
               <div class="work-box">Мобильные приложения</div>
             </li>
             <li class="owl-item">
-              <img src="./images/box3.jpg" alt="работа с палитрой цветов" width="370" />
+              <img srcset="./images/box3.jpg 1x, ./images/box3@3x.jpg 2x"
+              src="./images/box3.jpg" alt="работа с палитрой цветов" width="370" />
               <div class="work-box">Дизайнерские решения</div>
             </li>
           </ul>
@@ -136,7 +207,8 @@
           <h2 class="our-team">Наша команда</h2>
           <ul class="our-team-list">
             <li class="team-img">
-              <img src="./images/photo-igor.jpg" alt="product designer" width="270" />
+              <img src="./images/photo-igor.jpg" alt="product designer" width="270" 
+              srcset="./images/photo-igor.jpg 1x, ./images/photo-igor@2x.jpg 2x"/>
               <div class="team-name">
                 <h3 class="name-employee">Игорь Демьяненко</h3>
                 <p class="employee-job" lang="en">Product Designer</p>
@@ -173,7 +245,8 @@
               </div>
             </li>
             <li class="team-img">
-              <img src="./images/photo-olga.jpg" alt="frontend developer" width="270" />
+              <img src="./images/photo-olga.jpg" alt="frontend developer" width="270" 
+              srcset="./images/photo-olga.jpg 1x, ./images/photo-olga@2x.jpg 2x"/>
               <div class="team-name">
                 <h3 class="name-employee">Ольга Репина</h3>
                 <p class="employee-job" lang="en">Frontend Developer</p>
@@ -210,7 +283,8 @@
               </div>
             </li>
             <li class="team-img">
-              <img src="./images/photo-nik.jpg" alt="marketing" width="270" />
+              <img src="./images/photo-nik.jpg" alt="marketing" width="270" 
+              srcset="./images/photo-nik.jpg 1x, ./images/photo-nik@2x.jpg 2x"/>
               <div class="team-name">
                 <h3 class="name-employee">Николай Тарасов</h3>
                 <p class="employee-job" lang="en">Marketing</p>
@@ -247,7 +321,8 @@
               </div>
             </li>
             <li class="team-img">
-              <img src="./images/photo-mike.jpg" alt="ui design" width="270" />
+              <img src="./images/photo-mike.jpg" alt="ui design" width="270" 
+              srcset="./images/photo-mike.jpg 1x, ./images/photo-mike@2x.jpg 2x"/>
               <div class="team-name">
                 <h3 class="name-employee">Михаил Ермаков</h3>
                 <p class="employee-job" lang="en">UI Designer</p>
@@ -286,7 +361,7 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <section class="section client-section">
         <div class="container button-cont">
           <h2 class="our-team">Постоянные клиенты</h2>
           <ul class="our-clients">
@@ -450,6 +525,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
