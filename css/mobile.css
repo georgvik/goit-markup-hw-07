@@ -11,12 +11,40 @@
     padding-right: 15px; */
     } 
 }
+@media screen and (min-width:320px) and (max-width:479px) {
+    .container{
+        width: 100%;
+       display: flex;
+       align-items: center;
+         justify-content: space-between;
+         margin: 0 auto;
+    }
+    .business-title {
+        color: var(--color-text);
+        max-width: 260px;
+        font-weight: 900;
+        font-size:18px;
+        line-height: 2.33;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        /* padding-bottom: 30px; */
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+    .button-cont {
+        display: block;
+    }
+      
+}
 .button-cont {
     display: block;
 }
     .list-comun {
         display: none;
     }
+
     .nav-list {
         display: none;
     }
@@ -82,12 +110,26 @@ color: var(--color-one);
         margin-bottom: 32px;
         /* padding-bottom: 32px; */
     }
+    .mobile-nav-link{
+        font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 1.18;
+letter-spacing: 0.02em;
+color: var(--color-nav);
+    }
+    .current {
+        color: var(--color-one);
+        position: relative;
+    }
     .mobile-comun{
         margin: 0;
         padding: 0;
     }
     .mobile-contact{
         margin-top: auto;
+       
     }
     .list-mobile-item{
         margin-bottom: 32px;
@@ -101,6 +143,10 @@ line-height: 1.18;
 letter-spacing: 0.02em;
 color: var(--color-one);
     }
+    @media screen and (min-width:320px) and (max-width:479px) {
+        .mobile-heder-tel{font-size: 26px;
+line-height: 1.53;}
+        }
     .mobile-heder-email {
         font-family: 'Roboto';
 font-style: normal;
@@ -116,6 +162,15 @@ color:var(--color-heder-tel);
     align-items: center;
     padding: 0px;
     gap:10px 56px;
+    }
+    @media screen and (min-width:320px) and (max-width:479px) {
+        .mobile-social-list{
+            display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 0px;
+        gap:10px 30px;
+        }
     }
     .mobile-social-link-employee{
         display: flex;
@@ -142,6 +197,7 @@ color:var(--color-heder-tel);
         padding-top: 118px;
         padding-bottom: 118px;
         margin: 0 auto;
+        background-size: cover;
     }
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -170,6 +226,22 @@ color:var(--color-heder-tel);
         margin-bottom: 30px;
         margin-top: 0px;
     }
+    @media screen and (min-width:320px) and (max-width:479px) {
+        .business-title {
+            color: var(--color-text);
+            max-width: 260px;
+            font-weight: 900;
+            font-size:18px;
+            line-height: 2.33;
+            text-align: center;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            /* padding-bottom: 30px; */
+            margin: 0 auto;
+            margin-bottom: 30px;
+            margin-top: 0px;
+        }
+    }
     .button-service {
         display: flex;
         font-family: inherit;
@@ -195,12 +267,17 @@ color:var(--color-heder-tel);
         padding-bottom: 60px;
         
 }
+.work-section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
     .advance {
         display: flex;
         margin: 0;
+        margin-top: 30px;
         margin-bottom: 30px;
        max-width: 450px;
-        height: auto;
+        height: 120px;
         align-items: center;
         justify-content: center;
         background: var(--color-bg-advance);
@@ -210,8 +287,10 @@ color:var(--color-heder-tel);
         /* display: flex; */
         margin: 0 auto;
         padding: 0;
-        /* margin: -15px; */
-        
+            
+    }
+    .nomargin{
+        margin-top: 0px;
     }
     .advant-list .advant-list-title {
         text-align: center;
@@ -219,7 +298,19 @@ color:var(--color-heder-tel);
     .our-work {
         display: none;
     }
-    .our-work-list {
+    .our-team {
+        margin: 0 auto;
+        margin-bottom: 30px;
+        font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 1.17;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--color-nav);
+    }
+      .our-work-list {
         display: none;
     }
     .our-clients{
@@ -234,14 +325,14 @@ color:var(--color-heder-tel);
      
 }
 .clients-link {
-        width: 210px;
+        max-width: 210px;
         height:92px;
 } 
 .our-team-list {
     /* display: flex; */
     padding-left: 0px;
     margin: 0 auto;
-    margin: -15px;
+    margin: 0px -15px;
 }
       .team-img {
     margin: 15px 15px;
@@ -394,4 +485,18 @@ border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: var(--color-one );
+}
+@media screen and (min-width:320px) and (max-width:479px) {
+    .modal {
+        position: absolute;
+        max-width: 320px;
+        min-height: 609px;
+        background: var(--color-text);
+        top:50%;
+       left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+        padding: 40px;
+        
+    }
 }
